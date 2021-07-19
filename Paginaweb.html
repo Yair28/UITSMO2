@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <Link rel="stylesheet" HREF="css/bootstrap.min.css">
+  <Link rel="stylesheet" HREF="js/bootstrap.min.js">
+  <script async src="//jsfiddle.net/roimergarcia/XLqsf/embed/"></script>
+</head>
+<Body>
+      <section class="container">
+          <h6><center>
+     <br>UNIVERSIDAD DEL ISTMO</br>
+          FACULTAD DE ADMINISTRACIÓN
+    LICENCIATURA EN ADMINISTRACIÓN DE EMPRESAS
+            <p>ADMINISTRACION DE SISTEMA</p>
+                 <p>PROFESOR:
+             MILTON SERRANO</p>
+               <p>TAREA # 4 –
+          "Formulario de Registro”</p>
+                <p>NOMBRE:
+         LOPEZ, TOMAS 4-782-179</p>
+      <p>PANAMÁ, 19 DE JULIO DE 2021</p>
+      </h6>
+ <h3 class="text-text-uppercase text-center">Introduccion</h3>
+ <div class="container-fluid">
+ <p align="left"  FACE="arial">
+   A principios de los años 90, la mayoría de usuarios que se conectaban a
+   Internet lo hacían con módems a una velocidad máxima de 28.8 kbps.
+   En esa época, empezaban a desarrollarse las primeras aplicaciones web y
+   por tanto, las páginas web comenzaban a incluir formularios complejos.
+   Con unas aplicaciones web cada vez más complejas y una velocidad de
+   navegación tan lenta, surgió la necesidad de un lenguaje de programación
+   que se ejecutara en el navegador del usuario. De esta forma, si el usuario
+   no rellenaba correctamente un formulario, no se le hacía esperar mucho
+   tiempo hasta que el servidor volviera a mostrar el formulario indicando
+   los errores existentes.
+</p>
+</div>
+
+
+<h3 class="text-text-uppercase text-center"> Desarrollo Teorico</h3>
+
+<div class="container-fluid">
+<p align="left"><FONT SIZE="" FACE="arial">
+  <u><p><b>¿Cuales son los tipos de datos utilizados en JavaScript
+  definición y ejemplo?
+  </b></p></u>
+Todos los lenguajes de programación tienen estructuras de
+datos integradas, pero estas a menudo difieren de un
+lenguaje a otro. Este artículo intenta enumerar las
+estructuras de datos integradas disponibles en JavaScript
+y las propiedades que tienen. Estas se pueden utilizar para
+construir otras estructuras de datos. Siempre que es
+posible, se hacen comparaciones con otros lenguajes.
+</FONT></p>
+<div class="container-fluid">
+<p align="left" FACE="arial">
+El último estándar ECMAScript define nueve tipos:
+<p>Seis tipos de datos primitivos, controlados por el operador
+  typeof
+</p>
+<ul class="text-left">
+<li>Undefined: typeof instance === "undefined"</li>
+<span style="background-color:rgba(122, 171, 42)">
+//NO HAGAS ESTO
+// registra "foo string"
+(function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })()
+// registra "foo string"
+(function(undefined){ console.log(undefined, typeof undefined); })('foo');
+</span>
+<li>Boolean: typeof instance === "boolean"</li>
+<span style="background-color:rgba(122, 171, 42)">
+var x = new Boolean(false);
+if (x) {
+  // este código se ejecuta
+}
+</span>
+<li>Numbrer: typeof instance === "number"</li>
+<span style="background-color:rgba(122, 171, 42)">
+var miFuncion = new Function("5+2")
+var forma = "redonda"
+var tamano = 1
+var hoy = new Date()
+</span>
+<li>String: typeof instance === "string"</li>
+<span style="background-color:rgba(122, 171, 42)">
+color1=new String("verde")
+color1 instanceof String // devuelve verdadero (true)
+color2="coral"
+color2 instanceof String // devuelve falso (color2 no es un objeto String)
+</span>
+<li>BigInt: typeof instance === "bigint"</li>
+<span style="background-color:rgba(122, 171, 42)">
+const previouslyMaxSafeInteger = 9007199254740991n
+</span>
+<li>Symbol: typeof instance === "symbol"</li>
+<span style="background-color:rgba(122, 171, 42)">
+var sym1 = Symbol();
+var sym2 = Symbol("foo");
+var sym3 = Symbol("foo");
+</span>
+</ul>
+  </p>
+  </div>
+  <p align="left"><FONT FACE="arial">
+  <u><p><b>¿Expliquen como se guardan los datos en memoria
+    utilizando JavaScript. Realiza un ejemplo y documente
+    el codigo?
+  </b></p></u>
+  <p>
+    La API de almacenamiento web es muy fácil de usar: almacena
+    pares de datos simples de nombre/valor (limitado a cadenas,
+    números, etc.) y recupera estos valores cuando sea necesario.
+  </p>
+  <ol>
+<li>
+  <p>
+    Primero, ve a nuestra plantilla en blanco de almacenamiento web en
+  GitHub (abre esto en una nueva pestaña).
+  </p>
+</li>
+<li>
+  <p>
+    Abre la consola JavaScript de las herramientas de desarrollo
+  de tu navegador.
+  </p>
+</li>
+<li><p> Todos tus datos de almacenamiento web están contenidos en dos
+  estructuras similares a objetos dentro del navegador: sessionStorage
+  y localStorage. El primero conserva los datos mientras el navegador
+  está abierto (los datos se pierden cuando se cierra el navegador) y
+  el segundo conserva los datos incluso después de que el navegador se
+  cierra y luego se vuelve a abrir. Usaremos el segundo en este artículo,
+  ya que generalmente es más útil.
+  <br>El método Storage.setItem() te permite guardar un elemento de
+    datos en el almacenamiento; toma dos parámetros: el nombre del
+    elemento y su valor. Intenta escribir esto en tu consola de
+    JavaScript (cambia el valor a tu propio nombre, si lo deseas):
+    <span style="background-color:rgba(122, 171, 42)">
+    <br>localStorage.setItem('nombre','Chris');</br>
+    </span>
+    </p>
+  </li>
+  <li>
+  El método Storage.getItem() toma un parámetro, el nombre de un
+  elemento de datos que deseas recuperar, y devuelve el valor del
+  elemento. Ahora escribe estas líneas en tu consola JavaScript:
+  <span style="background-color:rgba(122, 171, 42)">
+  <br>let miNombre = localStorage.getItem('nombre');
+  miNombre</br>
+  </span>
+  Al escribir en la segunda línea, deberías ver que la variable
+  miNombre ahora contiene el valor del elemento de datos nombre.
+  </li>
+  <li>
+    <p>
+  El método Storage.removeItem() toma un parámetro, el nombre de
+  un elemento de datos que desea eliminar, y elimina ese elemento
+  del almacenamiento web. Escribe las siguientes líneas en tu
+  consola JavaScript:
+  <span style="background-color:rgba(122, 171, 42)">
+  <br>
+  localStorage.removeItem('nombre');
+let miNombre = localStorage.getItem('nombre');
+miNombre
+  </br>
+  </span>
+  La tercera línea ahora debería devolver null: el elemento nombre ya no existe en el almacenamiento web.
+  </p>
+  </li>
+</ol>
+  </FONT></p>
+
+<h3 class="text-text-uppercase text-center"> Desarrollo Practico</h3>
+<form id="form1">
+  <fieldset>
+<legend>Ingrese dos numeros</legend>
+<label for="">Numero 1:</label>
+<input type="text" class="form-control" id="txtN1">
+<br><br>
+<label for="">Numero 2:</label>
+<input type="text" class="form-control" id="txtN2">
+<br><br>
+<input type="button" class="form-control" onclick="Sumar();" value="Calucular">
+</fieldset>
+    <style>
+        form   { width:260px; height:245px; border:3px solid #ccc;padding:12px;}
+    </style>
+   <script type="text/javascript">
+     function Sumar() {
+               var n1 = document.getElementById('txtN1').value;
+               var n2 = document.getElementById('txtN2').value;
+               var suma = parseInt(n1) + parseInt(n2);
+               alert("La suma es: "+suma)
+           }
+   </script>
+   <h3 class="text-center">Gracias a Todos</h3>
+</body>
+</HTML>
